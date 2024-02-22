@@ -1,0 +1,58 @@
+X-Rate-Limit-Ip
+5:15:60,10:90:300,30:300:1800
+
+X-Rate-Limit-Ip-State
+1:15:0,1:90:0,1:300:0
+
+
+
+
+24*60*60
+
+86400 seconds per day
+8640 query requests per day
+8554 requests per day @ 10.1
+7854 requests per day and for sure under rate limit
+
+log each request
+
+
+
+backend
+- data scrappers that send data to a server that records it into database
+
+
+
+manual configurations done via frontend
+- select active trades
+  - minimum stock
+  - buy amount (d)
+  - sell amount (d)
+  - buy amount (c)
+  - sell amount (c)
+  - profitability based on direction
+  - button to normalize c based on d
+  - button to normalize d based on c
+  - buttons to round based on stack size (round down, round up)
+  - button to set amounts based on specified percentile
+  - checkbox to automatically exclude outliers
+  - checkbox to automatically exclude bad trade directions
+  - manually exclude trade direction
+  - price history graph
+
+if some value changes automatically, pulse green
+manually set - blue
+automatically set - green
+
+auto configurations
+- 3-way toggle for normalizing (normalize c based on d, don't normalize, normalize d based on c)
+- 3-way toggle for stack size rounding (round down, don't round, round up)
+- set amounts based on specified percentile
+- checkbox to exclude outliers
+
+
+
+- toggle to activate auto-update
+  - button to manual-update
+- toggle to activate auto-post
+  - button to manual-post
